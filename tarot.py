@@ -13,8 +13,8 @@ class Tarot:
     async def upload(self) -> None:
         with open("./deck.json") as f:
             df = f.read()
-            await self.db.delete(df)
-            await self.db.create(df)
+            await self.db.delete('deck')
+            await self.db.create('deck',df)
     
     async def pickcard(self, n:int, scope:str='all') -> List[str]:
         if scope == 'all':
@@ -41,5 +41,5 @@ class Tarot:
         res = await self.db.query("UPDATE deck SET is_host=true WHERE enum=type::number($enum)", {'enum':pick})
         return str(res)
     
-    def close(self) -> None:
-        self.db.close()
+    async def close(self) -> None:
+        await self.db.close()
