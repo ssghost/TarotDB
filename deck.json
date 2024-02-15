@@ -20,6 +20,5 @@
     {"enum":18, "name":"The Moon", "picked":0, "is_host":false},
     {"enum":19, "name":"The Sun", "picked":0, "is_host":false},
     {"enum":20, "name":"Judgement", "picked":0, "is_host":false},
-    {"enum":21, "name":"The World", "picked":0, "is_host":false},
-    {}
+    {"enum":21, "name":"The World", "picked":0, "is_host":false}
 ]
