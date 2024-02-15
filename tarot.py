@@ -41,3 +41,5 @@ class Tarot:
         res = await self.db.query("UPDATE deck SET is_host=true WHERE enum=type::number($enum)", {'enum':pick})
         return str(res)
     
+    def close(self) -> None:
+        self.db.close()
