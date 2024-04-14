@@ -23,7 +23,7 @@ class TarotNodb:
         for p in pick:
             res = self.deck.loc[self.deck['enum']==p]
             reslist.append(str(res))
-            self.deck.loc[self.deck['enum']==p]['picked']+=1
+            self.deck.loc[self.deck['enum']==p, 'picked']+=1
         return reslist
     
     def viewcard(self, name:str) -> str:
