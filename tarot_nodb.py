@@ -9,7 +9,7 @@ class TarotNodb:
 
     def writejson(self) -> None:
         with open("./deck.json", 'w') as f:
-            self.deck.to_json(f)
+            self.deck.to_json(f, orient='records')
             
     def pickcard(self, n:int, scope:str='all') -> List[str]:
         if scope == 'all':
