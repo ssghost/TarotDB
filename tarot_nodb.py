@@ -36,4 +36,4 @@ class TarotNodb:
         self.deck.loc[self.deck['enum']==pick]['is_host'] = True
         res = self.deck.loc[self.deck['enum']==pick] 
         return str(res)
-    
+
